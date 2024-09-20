@@ -2,63 +2,34 @@
 // SlideShow
 // ==============================================
 
+let currentSlide = 0;
+let slides = document.getElementsByClassName("slideShowImages");
+// let dots = document.getElementsByClassName("dot");
 
-// variable
-
-const slideImages = [
-    "../image/IMG_8691.JPEG",
-    "../image/IMG_8239.JPEG",
-    "../image/IMG_8238.JPEG",
-    "../image/IMG_6274.JPEG",
-];
-let currentImage = 0;
-let slideShowVar;
-
-// function
-
-function renderImage() {
-    document.body.style.backgroundImage = `url("${slideImages[currentImage]}")`;
+function nextImage(i) {
+    slides[currentSlide].classList.toggle("active");
+    //dots[currentSlide].className = dots[currentSlide].className.replace(" activeDot", "");
+    currentSlide = (currentSlide + i + slides.length) % slides.length;
+    slides[currentSlide].classList.toggle("active");
+    // dots[currentSlide].className += " activeDot";
 }
 
-function nextImage() {
-    currentImage = (currentImage + 1) % slideImages.length;
-    renderImage();
-}
-
-function prevImage() {
-    currentImage = (currentImage + slideImages.length - 1) % slideImages.length;
-    renderImage();
-}
-
-function slideShowInitiliza() {
-    document.body.style.transition = "all .2s";
-    document.body.style.backgroundImage = `url(../image/white)`;
-    setTimeout(renderImage, 300);
-    setTimeout(() => document.body.style.transition = "all .5s", 1000);
-}
-
-function slideShowUpdate() {
+function nextSlide() {
     let nxt = document.querySelector('.nextButton');
     nxt.onclick = function() {
-        nextImage();
-        clearInterval(slideShowVar);
+        nextImage(1);
     }
+}
+
+function prevSlide() {
     let prv = document.querySelector('.prevButton');
     prv.onclick = function() {
-        prevImage();
-        clearInterval(slideShowVar);
+        nextImage(-1);
     }
 }
 
-function slideShow() {
-    slideShowVar = setInterval(nextImage, 4000);  
-}
-
-// main
-
-renderImage();
-slideShowUpdate();
-slideShow();
+nextSlide();
+prevSlide();
 
 // ==============================================
 // menuBarIcon
@@ -68,10 +39,15 @@ slideShow();
 
 function menuBarIconUpdate() {
     let menuBarIcon = document.querySelector('.menuBarIcon');
-    console.log("hi");
     menuBarIcon.onclick = function() {
         menuBarIcon.classList.toggle('XmenuBarIcon')
-        console.log("hi");
+        let dropDown = document.querySelector('.dorpDownContent');
+        if (menuBarIcon.classList.contains('XmenuBarIcon')) {
+            dropDown.classList.toggle('show');
+        }
+        else {
+            dropDown.classList.toggle('show');
+        }
     }
 }
 
