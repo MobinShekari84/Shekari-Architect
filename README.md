@@ -7,7 +7,7 @@
 3. about (gotta talk to architect)
 4. contact (gotta talk to architect)
 
-### has beed added:
+### has been added:
 1. responsive navigation bar
 2. working slideshow with buttons
 
