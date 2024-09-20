@@ -103,13 +103,15 @@ body {
 }
 
 .dorpDownContent {
-    display: none;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s; 
     position: absolute;
     background-color: white;
     z-index: 1;
     left: 0;
     width: 100%;
-    animation: fade;
 }
 
 .dorpDownContent a {
@@ -126,7 +128,8 @@ body {
 }
 
 .dorpDownContent.show {
-    display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
 /* --------------------------------- */
@@ -160,6 +163,13 @@ body {
     align-items: center;
     justify-content: right;
     width: 40%;
+}
+
+@media screen and (max-width:1000px) {
+    .socialMedia {
+        width: auto;
+        max-width: 40%;
+    }
 }
 
 .socialMedia a {
