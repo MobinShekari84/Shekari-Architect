@@ -1,0 +1,227 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    transition: all .5s;
+}
+
+/* ========================================================================= */
+/* topNav */
+/* ========================================================================= */
+
+.topNav {
+    position: absolute;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    height: 7vh;
+    width: 90vw;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    overflow: hidden;
+}
+
+/* --------------------------------- */
+/* navLeft */
+/* --------------------------------- */
+
+.navLeft {
+    display: inline-block;
+    align-items: center;
+    overflow: hidden;
+    width: 40%;
+}
+
+.navLeft a {
+    font-family: "Ubuntu";
+    display: block;
+    float: left;
+    text-decoration: none;
+    padding: 2px 4px;
+    margin: 2px 4px;
+    color: #4b4848;
+    transition: all .2s;
+}
+
+.navLeft a:hover {
+    font-weight: bold;
+    transition: all .2s;
+}
+
+@media screen and (max-width:1000px) {
+    .navLeft {
+        display: none;
+    }
+
+}
+
+/* --------------------------------- */
+/* menuBarIcon */
+/* --------------------------------- */
+
+.menuBarIcon {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-right: 25%;
+    padding: 0 12px;
+}
+
+@media screen and (max-width:1000px) {
+    .menuBarIcon {
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #4b4848;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+  
+.XmenuBarIcon .bar1 {
+    transform: translate(0, 10px) rotate(-45deg);
+}
+  
+.XmenuBarIcon .bar2 {
+    opacity: 0;
+}
+
+.XmenuBarIcon .bar3 {
+    transform: translate(0, -10px) rotate(45deg);
+}
+
+/* --------------------------------- */
+/* logo */
+/* --------------------------------- */
+
+.logo {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.logo img {
+    display: block;
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 40%;
+}
+
+/* --------------------------------- */
+/* socialMedia */
+/* --------------------------------- */
+
+.socialMedia {
+    display: inline-block;
+    align-items: center;
+    justify-content: right;
+    width: 40%;
+}
+
+.socialMedia a {
+    display: block;
+    float: right;
+    padding: 1px 2px;
+    margin: 1px 2px;
+}
+
+.socialMedia a img {
+    width: 25px;
+    transition: all .2s;
+}
+
+.socialMedia a img:hover {
+    width: 30px;
+    transition: all .2s;
+}
+
+
+/* ========================================================================= */
+/* column */
+/* ========================================================================= */
+
+.column {
+    height: 70vh;
+    display: flex;
+    justify-content: right;
+    margin: 10vh 2vw;
+}
+
+.rightColumn {
+    float: right;
+    background-color: rgb(75, 72, 72, 0.7);
+    margin: 10px;
+    border-radius: 20px;
+    background-color: antiquewh ite;
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+    color: rgb(255, 255, 255, 0.7);
+    font-family: helvetica;
+}
+
+
+
+/* ========================================================================= */
+/* button(s) */
+/* ========================================================================= */
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    font-size: xx-large;
+    cursor: pointer;
+    color: white;
+    height: 100vh;
+    width: 7vw;
+    background-color: rgba(75, 72, 72, 0.3);
+    border-width: 0;
+    transition: all .5s;
+}
+
+.button:hover {
+    transition: all .5s;
+    font-size: xx-large;
+    cursor: pointer;
+    color: white;
+    height: 100vh;
+    width: 10vw;
+    background-color: rgba(256, 256, 256, 0.1);
+    border-width: 0;
+}
+
+/* ========================================================================= */
+/* bottomNav */
+/* ========================================================================= */
+
+.bottomNav {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 7vh;
+    width: 100vw;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+#creator {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: hwb(0 63% 35%);
+    font-size: 10px;
+}
