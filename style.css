@@ -227,6 +227,73 @@ body {
     opacity: 1;
 }
 
+/* infBox */
+
+.infBox {
+    color: #4b4848;
+    position: absolute;
+    height: 60%;
+    width: 25%;
+    border-radius: 5%;
+    background-color: rgba(255, 255, 255, 0.5);
+    right: 10%;
+    top: 20%;
+    font-family: helvetica;
+}
+
+#infBoxTitle {
+    font-size: 4vi;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 70%;
+    height: 10%;
+    top: 10%;
+    left: 20%;
+    font-weight: bolder;
+}
+
+#infBoxSubTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    position: absolute;
+    width: 70%;
+    height: 10%;
+    top: 20%;
+    left: 20%;
+    font-weight: lighter;
+    font-size: 2.5vi;
+}
+
+#infBoxVertical {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    top: 11%;
+    left: 10%;
+    width: 10%;
+    height: 17.5%;
+    font-size: 1vb;
+}
+
+#infBoxInfo {
+    position: absolute;
+    bottom: 10%;
+    font-size: 1.5vi;
+    left: 15%;
+}
+
+#infBoxInfo p, #infBoxInfo b {
+    margin: 0;
+    padding: 0;
+}
+
 /* button(s) */
 
 .button {
