@@ -221,10 +221,12 @@ body {
     transition: 1s;
     width: 100%;
     opacity: 0;
+    visibility: hidden;
 }
 
 .slideShowImages.active {
     opacity: 1;
+    visibility: visible;
 }
 
 /* infBox */
