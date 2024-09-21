@@ -238,9 +238,33 @@ body {
     width: 25%;
     border-radius: 5%;
     background-color: rgba(255, 255, 255, 0.5);
-    right: 10%;
     top: 20%;
     font-family: helvetica;
+    transition: 1.3s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.infBox.odd {
+    right: 0;
+}
+
+.infBox.even {
+    left: 0;
+}
+
+.infBox.odd.active{
+    right: 10%;
+}
+
+.infBox.even.active {
+    left: 10%;
+}
+
+.infBox.active {
+    visibility: visible;
+    opacity: 1;
+    transition: 1.3s;
 }
 
 #infBoxTitle {
@@ -320,7 +344,7 @@ body {
     right: 0;
 }
 
-.button:hover {
+.button:hover, .button:active {
     transition: all .5s;
     font-size: xx-large;
     cursor: pointer;
