@@ -4,10 +4,12 @@
 ## [link](https://mobinshekari84.github.io/Shekari-Architect/)
 
 ### to do: 
+1. projects (gotta talk to architect)
+2. about (gotta talk to architect)
+3. contact (gotta talk to architect)
+
+### in progress:
 1. inf box for each slide + animation
-2. projects (gotta talk to architect)
-3. about (gotta talk to architect)
-4. contact (gotta talk to architect)
 
 ### has been added:
 1. responsive navigation bar
