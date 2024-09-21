@@ -1,6 +1,8 @@
 
 # Shekari-Architect
 
+## [link](https://mobinshekari84.github.io/Shekari-Architect/)
+
 ### to do: 
 1. inf box for each slide + animation
 2. projects (gotta talk to architect)
