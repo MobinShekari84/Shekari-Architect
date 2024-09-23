@@ -5,16 +5,26 @@
 let currentSlide = 0;
 let slides = document.getElementsByClassName("slideShowImages");
 let infBox = document.getElementsByClassName("infBox");
-// let dots = document.getElementsByClassName("dot");
+let dots = document.getElementsByClassName("dot");
 
 function nextImage(i) {
     slides[currentSlide].classList.toggle("active");
     infBox[currentSlide].classList.toggle("active");
-    //dots[currentSlide].className = dots[currentSlide].className.replace(" activeDot", "");
+    dots[currentSlide].className = dots[currentSlide].className.replace(" activeDot", "");
     currentSlide = (currentSlide + i + slides.length) % slides.length;
     slides[currentSlide].classList.toggle("active");
     infBox[currentSlide].classList.toggle("active");
-    // dots[currentSlide].className += " activeDot";
+    dots[currentSlide].className += " activeDot";
+}
+
+function makeSlide(i) {
+    slides[currentSlide].classList.toggle("active");
+    infBox[currentSlide].classList.toggle("active");
+    dots[currentSlide].className = dots[currentSlide].className.replace(" activeDot", "");
+    currentSlide = i - 1;
+    slides[currentSlide].classList.toggle("active");
+    infBox[currentSlide].classList.toggle("active");
+    dots[currentSlide].className += " activeDot";
 }
 
 function nextSlide() {

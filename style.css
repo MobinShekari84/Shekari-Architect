@@ -6,6 +6,7 @@ body {
     background-size: cover;
     background-position: center center;
     transition: all .5s;
+    overflow-x: hidden;
 }
 
 /* ========================================================================= */
@@ -36,7 +37,8 @@ body {
 }
 
 .navLeft a {
-    font-family: "Ubuntu";
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1vi;
     display: block;
     float: left;
     text-decoration: none;
@@ -47,7 +49,8 @@ body {
 }
 
 .navLeft a:hover {
-    font-weight: bold;
+    color: black;
+    font-size: 1.05vi;
     transition: all .2s;
 }
 
@@ -150,7 +153,10 @@ body {
 
 @media screen and (max-width:1000px) {
     .logo img {
-        width: 60%;
+        position: absolute;
+        width: 25%;
+        left: 37.5%;
+        right: 37.5%;
     }
 }
 
@@ -267,7 +273,7 @@ body {
     transition: 1.3s;
 }
 
-#infBoxTitle {
+.infBoxTitle {
     font-size: 4vi;
     text-align: center;
     align-items: center;
@@ -281,7 +287,7 @@ body {
     font-weight: bolder;
 }
 
-#infBoxSubTitle {
+.infBoxSubTitle {
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -294,7 +300,7 @@ body {
     font-size: 2.5vi;
 }
 
-#infBoxVertical {
+.infBoxVertical {
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -308,14 +314,14 @@ body {
     font-size: 1vb;
 }
 
-#infBoxInfo {
+.infBoxInfo {
     position: absolute;
     bottom: 10%;
     font-size: 1.5vi;
     left: 15%;
 }
 
-#infBoxInfo p, #infBoxInfo b {
+.infBoxInfo p, .infBoxInfo b {
     margin: 0;
     padding: 0;
 }
@@ -358,8 +364,8 @@ body {
 
 .dots {
     position: absolute;
-    display: block;
-    bottom: 3%;
+    display: flex;
+    bottom: 3vi;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -371,10 +377,11 @@ body {
 
 .dot {
     display: inline-block;
+    align-items: center;
     cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 4px 2px;
+    height: 1vi;
+    width: 1vi;
+    margin: 0.5vi 0.2vi;
     background-color: rgba(75, 72, 72, 0.3);
     border-radius: 50%;
     transition: background-color 0.6s ease;
@@ -386,6 +393,73 @@ body {
 
 .activeDot {
     background-color: rgba(75, 72, 72, 0.7);
+}
+
+
+/* ========================================================================= */
+/* Projects */
+/* ========================================================================= */
+
+.projects {
+    color: #4b4848;
+    font-size: 2vi;
+    font-family: helvetica, sans-serif;
+    padding: 2% 0%;
+}
+
+.projectsSlide {
+    display: flex;
+    width: 100%;
+    margin: 2.5% 0;
+}
+
+.rightChild {
+    width: 65%;
+    margin: 0 2.5%;
+}
+
+.leftChild {
+    width: 27.5%;
+    margin-left: 2.5%;
+}
+
+.projectInfoBox {
+    background-color: #f4f4f4;
+    padding: 0 2.5%;
+    text-align: justify;
+    font-size: 1.5vi;
+}
+
+.projectInfoBox p, .projectInfoBox b, .projectInfoBox h1 {
+    margin: 0;
+    padding: 0;
+    padding-top: 2.5%;
+}
+
+.projectsRednder {
+    display: flex;
+    margin: 2.5% 2.5%;
+}
+
+.Render {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+}
+
+.Render img {
+    display: flex;
+    object-fit: cover;
+    width: 70%;
+    aspect-ratio: 1;
+    transition: all 1s;
+}
+
+.Render img:hover, .Render img:after {
+    transition: all 1s;
+    aspect-ratio: 3/2;
+    width: 100%;
+    filter: brightness(50%);
 }
 
 /* ========================================================================= */
