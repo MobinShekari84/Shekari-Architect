@@ -2,7 +2,9 @@
 <head>
     <title>Shekari Architect</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="topNav">
@@ -26,7 +28,7 @@
             <a href="#">Contact</a>
         </div>
         <div class="logo">
-            <img src="images/logo.png">
+            <img src="images/Logo.png"> 
         </div>
         <div class="socialMedia">
             <a href="#"><img src="images/linkedin.png"></a>
@@ -39,7 +41,7 @@
             <div class="slideShowImages active">
                 <img src="images/IMG_8691.JPEG" style="width: 100%">
                 <div class="infBox active odd">
-                    <div id="infBoxTitle">
+                    <div class="infBoxTitle">
                         <span>H</span>
                         <span>A</span>
                         <span>Y</span>
@@ -47,7 +49,7 @@
                         <span>A</span>
                         <span>T</span>
                     </div>
-                    <div id="infBoxSubTitle">
+                    <div class="infBoxSubTitle">
                         <span>B</span>
                         <span>u</span>
                         <span>i</span>
@@ -57,7 +59,7 @@
                         <span>n</span>
                         <span>g</span>
                     </div>
-                    <div id="infBoxVertical">
+                    <div class="infBoxVertical">
                         <span>R</span>
                         <span>e</span>
                         <span>s</span>
@@ -70,7 +72,7 @@
                         <span>a</span>
                         <span>l</span>
                     </div>
-                    <div id="infBoxInfo">
+                    <div class="infBoxInfo">
                         <b>Site Location</b>
                         <p>Ardakan, Yazd</p>
                         <br>
@@ -95,15 +97,32 @@
                 <div class="infBox even"></div>
             </div>
         </div>
-        <!-- =======================================================================================
-        <div class="dots" style="text-align: center;">
+        <div class="dots">
             <span class="dot activeDot" onclick="makeSlide(1)"></span>
             <span class="dot" onclick="makeSlide(2)"></span>
             <span class="dot" onclick="makeSlide(3)"></span>
+            <span class="dot" onclick="makeSlide(4)"></span>
         </div> 
-        ======================================================================================== -->
         <button class="prevButton button"><</button>
         <button class="nextButton button">></button>
+    </div>
+    <div class="projects">
+        <div class="projectsSlide">
+            <div class="leftChild">
+                <div class="projectInfoBox">
+                    <h1>Title</h1>
+                    <h2>SubTitle</h2>
+                    <h3>subTitle</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+            <div class="rightChild">
+                <img src='images/IMG_6276.JPEG' style="width: 100%; margin-bottom: 2.5%;">
+                <div class="projectInfoBox">
+                    <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Felis dui feugiat arcu faucibus at conubia elit. Fames penatibus himenaeos aenean lacinia porttitor diam; himenaeos placerat ultrices. Nibh class dui turpis interdum nibh felis nostra mauris vivamus. Quisque imperdiet lorem parturient dignissim semper nisi posuere. At duis imperdiet ante himenaeos montes curabitur nec accumsan. Rhoncus tristique semper maecenas curabitur venenatis eget enim litora maecenas.</p>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="bottomNav">
         <p id="creator">Created By Mobin Shekari</p>
