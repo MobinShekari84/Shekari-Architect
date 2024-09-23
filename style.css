@@ -38,6 +38,7 @@ body {
 
 .navLeft a {
     font-family: "Ubuntu", sans-serif;
+    font-size: 1vi;
     display: block;
     float: left;
     text-decoration: none;
@@ -49,6 +50,7 @@ body {
 
 .navLeft a:hover {
     color: black;
+    font-size: 1.05vi;
     transition: all .2s;
 }
 
@@ -425,6 +427,7 @@ body {
     background-color: #f4f4f4;
     padding: 0 2.5%;
     text-align: justify;
+    font-size: 1.5vi;
 }
 
 .projectInfoBox p, .projectInfoBox b, .projectInfoBox h1 {
