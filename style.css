@@ -408,6 +408,7 @@ body {
 .projectsSlide {
     display: flex;
     width: 100%;
+    margin: 2.5% 0;
 }
 
 .rightChild {
@@ -432,6 +433,30 @@ body {
     padding-top: 2.5%;
 }
 
+.projectsRednder {
+    display: flex;
+    margin: 2.5% 2.5%;
+}
+
+.Render {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+}
+
+.Render img {
+    display: flex;
+    object-fit: cover;
+    width: 70%;
+    aspect-ratio: 1;
+    transition: all 1s;
+}
+
+.Render img:hover, .Render img:after {
+    transition: all 1s;
+    aspect-ratio: 3/2;
+    width: 100%;
+}
 
 /* ========================================================================= */
 /* bottomNav */
