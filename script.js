@@ -70,17 +70,12 @@ menuBarIconUpdate();
 // project
 // ==============================================
 
-function showRender () {
-    console.log(this);
-}   
-
 let imgSrc;
 
 let renders = document.querySelectorAll(".Render img").forEach((render) => {
     render.onclick = function() {
         imgSrc = render.getAttribute("src");
         imgSrc = imgSrc.replace('compressed', 'original');
-        console.log(imgSrc);
         imgModal(imgSrc);
     }
 });
@@ -96,14 +91,32 @@ let imgModal = (src) => {
     closeBtn.innerHTML += '<div class="bar1"></div>';
     closeBtn.innerHTML += '<div class="bar3"></div>';
     closeBtn.onclick = () => {
-        // modal.style.animation = "zoomout 0.3s";
         modal.style.visibility = "hidden";
         modal.style.opacity = "0";
         setTimeout(() => {
             modal.remove();
         }, 1000);
     };
-    const rightBtn = document.createElement("div");
-    rightBtn.innerHTML += ""
-    modal.append(newImage, closeBtn);
+    const rightBtn = document.createElement("button");
+    const leftBtn = document.createElement("button");
+    rightBtn.setAttribute("class", "modalButton");
+    leftBtn.setAttribute("class", "modalButton");
+    rightBtn.onclick = () => {
+        let num = src.match(/\d*.png/)[0];
+        num = parseInt(num.slice(0, num.length - 4));
+        num = num == 11? num = 12 : (num + 1) % 12;
+        src = src.replace(/\d*.png/, num + '.png');
+        newImage.setAttribute("src", src);
+    }
+    leftBtn.onclick = () => {
+        let num = src.match(/\d*.png/)[0];
+        num = parseInt(num.slice(0, num.length - 4));
+        num--;
+        if (num == 0) num = 12;
+        src = src.replace(/\d*.png/, num + '.png');
+        newImage.setAttribute("src", src);
+    }
+    rightBtn.innerHTML += ">";
+    leftBtn.innerHTML += "<";
+    modal.append(leftBtn, newImage, closeBtn, rightBtn);
 };

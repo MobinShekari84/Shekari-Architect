@@ -502,6 +502,7 @@ body {
 .modal img {
     width: 50%;
     object-fit: cover;
+    transition: all 0.3s;
 }
 
 .modalCloseButton {
@@ -524,6 +525,17 @@ body {
 
 .modalCloseButton .bar3 {
     transform: translate(0, -10px) rotate(45deg);
+}
+
+.modalButton {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    border-width: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 3vi;
+    height: 10vw;
+    width: 10vw;
 }
 
 /* ========================================================================= */
