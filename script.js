@@ -65,3 +65,58 @@ function menuBarIconUpdate() {
 }
 
 menuBarIconUpdate();
+
+// ==============================================
+// project
+// ==============================================
+
+let imgSrc;
+
+let renders = document.querySelectorAll(".Render img").forEach((render) => {
+    render.onclick = function() {
+        imgSrc = render.getAttribute("src");
+        imgSrc = imgSrc.replace('compressed', 'original');
+        imgModal(imgSrc);
+    }
+});
+
+let imgModal = (src) => {
+    const modal = document.createElement("div");
+    modal.setAttribute("class", "modal");
+    document.querySelector("body").append(modal);
+    const newImage = document.createElement("img");
+    newImage.setAttribute("src", src);
+    const closeBtn = document.createElement("div");
+    closeBtn.setAttribute("class", "modalCloseButton");
+    closeBtn.innerHTML += '<div class="bar1"></div>';
+    closeBtn.innerHTML += '<div class="bar3"></div>';
+    closeBtn.onclick = () => {
+        modal.style.visibility = "hidden";
+        modal.style.opacity = "0";
+        setTimeout(() => {
+            modal.remove();
+        }, 1000);
+    };
+    const rightBtn = document.createElement("button");
+    const leftBtn = document.createElement("button");
+    rightBtn.setAttribute("class", "modalButton");
+    leftBtn.setAttribute("class", "modalButton");
+    rightBtn.onclick = () => {
+        let num = src.match(/\d*.png/)[0];
+        num = parseInt(num.slice(0, num.length - 4));
+        num = num == 11? num = 12 : (num + 1) % 12;
+        src = src.replace(/\d*.png/, num + '.png');
+        newImage.setAttribute("src", src);
+    }
+    leftBtn.onclick = () => {
+        let num = src.match(/\d*.png/)[0];
+        num = parseInt(num.slice(0, num.length - 4));
+        num--;
+        if (num == 0) num = 12;
+        src = src.replace(/\d*.png/, num + '.png');
+        newImage.setAttribute("src", src);
+    }
+    rightBtn.innerHTML += ">";
+    leftBtn.innerHTML += "<";
+    modal.append(leftBtn, newImage, closeBtn, rightBtn);
+};
