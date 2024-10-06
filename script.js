@@ -48,23 +48,21 @@ prevSlide();
 // menuBarIcon
 // ==============================================
 
-//function
-
-function menuBarIconUpdate() {
-    let menuBarIcon = document.querySelector('.menuBarIcon');
-    menuBarIcon.onclick = function() {
-        menuBarIcon.classList.toggle('XmenuBarIcon')
-        let dropDown = document.querySelector('.dorpDownContent');
-        if (menuBarIcon.classList.contains('XmenuBarIcon')) {
-            dropDown.classList.toggle('show');
-        }
-        else {
-            dropDown.classList.toggle('show');
-        }
+function changeMenuIcon() {
+    this.classList.toggle('xmenu');
+    const dropDownMenu = document.querySelectorAll('.dropDownMenu');
+    if (dropDownMenu[0].style.visibility == "visible") {
+        dropDownMenu[0].style.visibility = "hidden";
+        dropDownMenu[0].style.opacity = "0";
+    }
+    else {
+        dropDownMenu[0].style.visibility = "visible";
+        dropDownMenu[0].style.opacity = "1";
     }
 }
 
-menuBarIconUpdate();
+const menuicon = document.querySelectorAll('.menuicon');
+menuicon.forEach(el => el.addEventListener('click', changeMenuIcon));
 
 // ==============================================
 // project

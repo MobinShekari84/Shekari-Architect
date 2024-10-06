@@ -1,11 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center center;
-    transition: all .5s;
     overflow-x: hidden;
 }
 
@@ -13,198 +8,157 @@ body {
 /* topNav */
 /* ========================================================================= */
 
-.topNav {
-    padding-left: 5vw;
-    padding-right: 5vw;
-    height: 7vh;
-    width: 90vw;
-    top: 0;
+.navbar {
     display: flex;
-    align-items: center;
-    background-color: white;
-    overflow: hidden;
-}
-
-/* --------------------------------- */
-/* navLeft */
-/* --------------------------------- */
-
-.navLeft {
-    display: inline-block;
-    align-items: center;
-    overflow: hidden;
-    width: 40%;
-}
-
-.navLeft a {
-    font-family: "Ubuntu", sans-serif;
+    font-family: ubuntu;
+    height: 6vi;
     font-size: 1vi;
-    display: block;
-    float: left;
+    padding: 0 30px;
+}
+
+.link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+}
+
+.link a {
     text-decoration: none;
-    padding: 2px 4px;
-    margin: 2px 4px;
+    margin: 5px;
+    padding: 10px 15px;
     color: #4b4848;
-    transition: all .2s;
+    transition: all .3s;
 }
 
-.navLeft a:hover {
-    color: black;
-    font-size: 1.05vi;
-    transition: all .2s;
+.dropDownMenu {
+    position: absolute;
+    display: block;
+    visibility: hidden; 
+    opacity: 0;
+    z-index: 5;
+    font-family: ubuntu;
+    font-size: 2.5vi;
+    background-color: white;
+    transition: all .3s;
+    width: 100%;
 }
 
-@media screen and (max-width:1000px) {
-    .navLeft {
-        display: none;
-    }
+.dropDownMenuLink {
+    display: flex;
+    padding: 10px 30px;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-/* --------------------------------- */
-/* menuBarIcon */
-/* --------------------------------- */
-
-.dropDownMobile {
-    overflow: hidden;
+.dropDownMenuLink a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 10px;
+    color: #4b4848;
 }
 
-.menuBarIcon {
+.menuicon {
+    display: none;
+}
+
+#fixWidthForMenuicon {
     display: none;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    margin-right: 25%;
-    padding: 0 12px;
+    width: 30%;
 }
 
-@media screen and (max-width:1000px) {
-    .menuBarIcon {
-        display: inline-block;
-        cursor: pointer;
-    }
-}
-
-.bar1, .bar2, .bar3 {
+.bar {
     width: 35px;
     height: 4px;
     border-radius: 5px;
     background-color: #4b4848;
-    margin: 6px 0;
+    margin: 3px 0;
     transition: 0.4s;
 }
-  
-.XmenuBarIcon .bar1 {
+
+.xmenu .bar:nth-child(1) {
     transform: translate(0, 10px) rotate(-45deg);
 }
-  
-.XmenuBarIcon .bar2 {
+
+.xmenu .bar:nth-child(2) {
+    visibility: hidden;
     opacity: 0;
 }
 
-.XmenuBarIcon .bar3 {
+.xmenu .bar:nth-child(3) {
     transform: translate(0, -10px) rotate(45deg);
 }
 
-.dorpDownContent {
-    display: block;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.5s; 
-    position: absolute;
-    background-color: white;
-    z-index: 1;
-    left: 0;
-    width: 100%;
-}
-
-.dorpDownContent a {
-    text-align: left;
-    font-size: 30px;
-    margin: 5% 80% 5% 5%;
-    float: none;
-    color: black;
-    text-decoration: none;
-    display: block;
-    font-family: "Ubuntu";
-    padding: 8px 4px;
-    color: #4b4848;
-}
-
-.dorpDownContent.show {
-    visibility: visible;
-    opacity: 1;
-}
-
-/* --------------------------------- */
-/* logo */
-/* --------------------------------- */
-
 .logo {
-    display: inline-block;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
 }
 
 .logo img {
-    display: block;
-    margin: 0 auto;
-    padding: 0 auto;
-    width: 40%;
+    width: 200px;
 }
 
-@media screen and (max-width:1000px) {
-    .logo img {
-        position: absolute;
-        width: 25%;
-        left: 37.5%;
-        right: 37.5%;
-    }
-}
-
-/* --------------------------------- */
-/* socialMedia */
-/* --------------------------------- */
-
-.socialMedia {
-    display: inline-block;
+.socialmedia {
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: right;
-    width: 40%;
+    width: 30%;
 }
 
-@media screen and (max-width:1000px) {
-    .socialMedia {
-        width: auto;
-        max-width: 40%;
-    }
-}
-
-.socialMedia a {
-    display: block;
-    float: right;
-    padding: 1px 2px;
-    margin: 1px 2px;
-}
-
-.socialMedia a img {
-    width: 25px;
-    transition: all .2s;
-}
-
-.socialMedia a img:hover {
+.socialmedia img {
+    margin: 3px 6px;
+    padding: 4px 4px;
     width: 30px;
-    transition: all .2s;
+    transition: all .3s;
 }
 
+@media screen and (min-width:1000px) {
+    .link a:hover {
+        color: rgb(33, 33, 33);
+        font-size: 1.1vi;
+        transition: all .3s;
+        background-color: whitesmoke;
+        border-radius: .5vi;
+    }
+    .socialmedia img:hover {
+        width: 35px;
+        transition: all .3s;
+        background-color: whitesmoke;
+        border-radius: .5vi;
+    }
+}
 
 @media screen and (max-width:1000px) {
-    .socialMedia a img {
-        width: 35px;
+    .navbar {
+        height: 12vi;
     }
-    .socialMedia a img:hover {
-        width: 40px;
+    .link {
+        display: none;
+    }
+    #fixWidthForMenuicon {
+        display: flex;
+    }
+    .menuicon {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: fit-content;
+        padding: 5px;
+        cursor: pointer;
+    }
+    .logo img {
+        width: 25vi;
+    }
+    .socialmedia img {
+        width: 4vi;
+        margin: 1px 1px;
+        padding: 2px 2px;
     }
 }
-
 
 /* ========================================================================= */
 /* SlideShow */
