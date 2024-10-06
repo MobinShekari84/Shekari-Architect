@@ -402,8 +402,7 @@ body {
 
 .projects {
     color: #4b4848;
-    font-size: 2vi;
-    font-family: helvetica, sans-serif;
+    font-family: "Rubik", sans-serif;
     padding: 2% 0%;
 }
 
@@ -426,11 +425,18 @@ body {
 .projectInfoBox {
     background-color: #f4f4f4;
     padding: 0 2.5vi;
+    direction: rtl;
     text-align: justify;
-    font-size: 1.5vi;
+    font-size: 2cqb;
 }
 
-.projectInfoBox p, .projectInfoBox b, .projectInfoBox h1 {
+@media screen and (max-width:1000px) {
+    .projectInfoBox {
+        font-size: 15px;
+    }
+}
+
+.projectInfoBox p, .projectInfoBox b, .projectInfoBox h1, .projectInfoBox h4, .projectInfoBox h5{
     margin: 0;
     padding: 0;
     padding-top: 2.5%;
