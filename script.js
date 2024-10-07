@@ -86,6 +86,7 @@ let imgModal = (src) => {
     document.querySelector("body").append(modal);
     const newImage = document.createElement("img");
     newImage.setAttribute("src", src);
+    console.log(src);
     const closeBtn = document.createElement("div");
     closeBtn.setAttribute("class", "modalCloseButton");
     closeBtn.innerHTML += '<div class="bar1"></div>';
@@ -97,26 +98,5 @@ let imgModal = (src) => {
             modal.remove();
         }, 1000);
     };
-    const rightBtn = document.createElement("button");
-    const leftBtn = document.createElement("button");
-    rightBtn.setAttribute("class", "modalButton");
-    leftBtn.setAttribute("class", "modalButton");
-    rightBtn.onclick = () => {
-        let num = src.match(/\d*.png/)[0];
-        num = parseInt(num.slice(0, num.length - 4));
-        num = num == 11? num = 12 : (num + 1) % 12;
-        src = src.replace(/\d*.png/, num + '.png');
-        newImage.setAttribute("src", src);
-    }
-    leftBtn.onclick = () => {
-        let num = src.match(/\d*.png/)[0];
-        num = parseInt(num.slice(0, num.length - 4));
-        num--;
-        if (num == 0) num = 12;
-        src = src.replace(/\d*.png/, num + '.png');
-        newImage.setAttribute("src", src);
-    }
-    rightBtn.innerHTML += ">";
-    leftBtn.innerHTML += "<";
-    modal.append(leftBtn, newImage, closeBtn, rightBtn);
+    modal.append(newImage, closeBtn);
 };
