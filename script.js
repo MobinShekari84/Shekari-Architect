@@ -32,6 +32,9 @@ function nextSlide() {
     nxt.onclick = function() {
         nextImage(1);
     }
+    setInterval(() => {
+        nextImage(1);
+    }, 5000);
 }
 
 function prevSlide() {
@@ -54,7 +57,7 @@ function menuBarIconUpdate() {
     let menuBarIcon = document.querySelector('.menuBarIcon');
     menuBarIcon.onclick = function() {
         menuBarIcon.classList.toggle('XmenuBarIcon')
-        let dropDown = document.querySelector('.dorpDownContent');
+        let dropDown = document.querySelector('.dropDownContent');
         if (menuBarIcon.classList.contains('XmenuBarIcon')) {
             dropDown.classList.toggle('show');
         }
@@ -65,6 +68,13 @@ function menuBarIconUpdate() {
 }
 
 menuBarIconUpdate();
+
+function projectsDropDown() {
+    let projectsBar = document.querySelector('.dropDownProjects a');
+    projectsBar.onclick = function() {
+        alert("hi");
+    }
+}
 
 // ==============================================
 // project

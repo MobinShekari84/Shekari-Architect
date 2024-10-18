@@ -60,6 +60,13 @@ body {
     }
 }
 
+.dropDownContentProjects {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+
 /* --------------------------------- */
 /* menuBarIcon */
 /* --------------------------------- */
@@ -105,7 +112,7 @@ body {
     transform: translate(0, -10px) rotate(45deg);
 }
 
-.dorpDownContent {
+.dropDownContent {
     display: block;
     visibility: hidden;
     opacity: 0;
@@ -117,7 +124,7 @@ body {
     width: 100%;
 }
 
-.dorpDownContent a {
+.dropDownContent a {
     text-align: left;
     font-size: 30px;
     margin: 5% 80% 5% 5%;
@@ -130,7 +137,7 @@ body {
     color: #4b4848;
 }
 
-.dorpDownContent.show {
+.dropDownContent.show {
     visibility: visible;
     opacity: 1;
 }
