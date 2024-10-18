@@ -58,23 +58,11 @@ function menuBarIconUpdate() {
     menuBarIcon.onclick = function() {
         menuBarIcon.classList.toggle('XmenuBarIcon')
         let dropDown = document.querySelector('.dropDownContent');
-        if (menuBarIcon.classList.contains('XmenuBarIcon')) {
-            dropDown.classList.toggle('show');
-        }
-        else {
-            dropDown.classList.toggle('show');
-        }
+        dropDown.classList.toggle('show');
     }
 }
 
 menuBarIconUpdate();
-
-function projectsDropDown() {
-    let projectsBar = document.querySelector('.dropDownProjects a');
-    projectsBar.onclick = function() {
-        alert("hi");
-    }
-}
 
 // ==============================================
 // project

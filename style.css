@@ -60,13 +60,6 @@ body {
     }
 }
 
-.dropDownContentProjects {
-    display: block;
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
-}
-
 /* --------------------------------- */
 /* menuBarIcon */
 /* --------------------------------- */
