@@ -27,9 +27,18 @@ function makeSlide(i) {
     dots[currentSlide].className += " activeDot";
 }
 
+let autoSlideInterval = setInterval(() => {
+    nextImage(1);
+}, 3000);
+
+function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+}
+
 function nextSlide() {
     let nxt = document.querySelector('.nextButton');
     nxt.onclick = function() {
+        stopAutoSlide();
         nextImage(1);
     }
 }
@@ -37,6 +46,7 @@ function nextSlide() {
 function prevSlide() {
     let prv = document.querySelector('.prevButton');
     prv.onclick = function() {
+        stopAutoSlide();
         nextImage(-1);
     }
 }
@@ -52,14 +62,14 @@ prevSlide();
 
 function menuBarIconUpdate() {
     let menuBarIcon = document.querySelector('.menuBarIcon');
+    let dropDown = document.querySelector('.dorpDownContent');
     menuBarIcon.onclick = function() {
-        menuBarIcon.classList.toggle('XmenuBarIcon')
-        let dropDown = document.querySelector('.dorpDownContent');
-        if (menuBarIcon.classList.contains('XmenuBarIcon')) {
-            dropDown.classList.toggle('show');
-        }
-        else {
-            dropDown.classList.toggle('show');
+        menuBarIcon.classList.toggle('XmenuBarIcon');
+        dropDown.classList.toggle('show');
+        if (dropDown.classList.contains('show')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
         }
     }
 }
